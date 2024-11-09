@@ -9,18 +9,17 @@ while True:
         break
 
 pygame.init()
-screen_size = 500
-screen = pygame.display.set_mode((500, 500))
+screenSize = 500
+screen = pygame.display.set_mode((screenSize, screenSize))
 
 def yy(y):
-  return (-y + screen_size)
+  return (-y + screenSize)
 
 def px(x,y):
     screen.set_at((int(x), int(y)), (255, 255, 255))
 
-
 def graph(i):
-    for x in range(screen_size):
+    for x in range(screenSize):
         y = eval(eq[i])
         px(x, yy(y))
 
